@@ -9,7 +9,8 @@ fpath=(
     $fpath
 )
 
+# This can be done by declaring path to be an array of unique values
 typeset -aU path
 
-export EDITOR='nvim'
-export GIT_EDITOR='nvim'
+# export EDITOR='nvim'
+# export GIT_EDITOR='nvim'
