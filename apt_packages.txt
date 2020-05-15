@@ -1,0 +1,6 @@
+# Totalcommander
+mc
+
+git
+tmux
+zsh
