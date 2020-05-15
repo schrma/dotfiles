@@ -42,7 +42,7 @@ done
 
 echo -e "\\n\\nCreating vim symlinks"
 echo "=============================="
-VIMFILES=( "$HOME/.vim:$DOTFILES/config/nvim"
+VIMFILES=( "$HOME/vim-config:$DOTFILES/config/nvim/vim-config/"
         "$HOME/.vimrc:$DOTFILES/config/nvim/init.vim" )
 
 for file in "${VIMFILES[@]}"; do
