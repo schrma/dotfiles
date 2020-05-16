@@ -4,3 +4,4 @@ mc
 git
 tmux
 zsh
+silversearcher-ag

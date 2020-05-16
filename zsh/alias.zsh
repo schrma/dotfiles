@@ -20,6 +20,9 @@ alias tl='tmux ls'
 alias ta='tmux a'
 alias tk='tmux kill-session -t'
 
+# ssh
+alias sr='ssh -p 1022 marco@neukirch.spdns.org'
+
 # Git
 
 alias gcam='git commit -a -m'

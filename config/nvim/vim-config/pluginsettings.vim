@@ -12,7 +12,7 @@ set rtp+=~/.vim/bundle/vundle
 " this is the call to begin the vundle Plugin Opperation
 
 call vundle#begin()
-Plugin 'Lokaltog/vim-powerline.git'
+" Plugin 'Lokaltog/vim-powerline.git'
 " Plugin 'klen/python-mode'
 " Plugin 'gmarik/Vundle.vim'
 Plugin 'plasticboy/vim-markdown'
@@ -37,9 +37,9 @@ Plugin 'Valloric/YouCompleteMe'
 " Plugin 'vim-scripts/MatlabFilesEdition'
 
 
-" Plugin 'Shougo/unite.vim'
+" Plugin 'Shougo/nite.vim'
 " Plugin 'vim-scripts/Conque-GDB'
-" Plugin 'kien/ctrlp.vim'
+Plugin 'kien/ctrlp.vim'
 
 " comment
 " Plugin 'danro/rename.vim'
@@ -50,7 +50,8 @@ Plugin 'Valloric/YouCompleteMe'
 
 Bundle 'tpope/vim-fugitive'
 
-"Plugin 'bling/vim-airline'
+" Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline.git'
 call vundle#end()
 
 "let s:MSWindows = has('win95') + has('win16') + has('win32') + has('win64')
