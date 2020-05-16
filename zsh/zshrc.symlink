@@ -1,10 +1,8 @@
-# plugins=(git zsh-autosuggestions)
-
 ################################
 # User configuration Marco
 ################################
 
- export ZSH=$DOTFILES/zsh
+export ZSH=$DOTFILES/zsh
 
 if [[ -d $DOTFILES/zsh/functions ]]; then
     for func in $DOTFILES/zsh/functions/*(:t); autoload -U $func
@@ -35,6 +33,7 @@ prepend_path $DOTFILES/bin
 
 source "$DOTFILES/zsh/agnoster.zsh-theme"
 source "$DOTFILES/zsh/alias.zsh"
+source "$DOTFILES/zsh/git.zsh"
 
 if [[ -a ~/.localrc ]]; then
     source ~/.localrc
@@ -51,7 +50,7 @@ typeset -A plugins
 
 zfetch $ZPLUGDIR zsh-users/zsh-syntax-highlighting
 zfetch $ZPLUGDIR zsh-users/zsh-autosuggestions
-zfetch $ZPLUGDIR chriskempson/base16-shell
+# zfetch $ZPLUGDIR chriskempson/base16-shell
 
 if [[ -x "$(command -v fnm)" && -z "$FNM_LOADED" ]]; then
     eval "$(fnm env --multi --use-on-cd)"
@@ -74,12 +73,3 @@ fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
