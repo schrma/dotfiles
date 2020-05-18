@@ -37,4 +37,3 @@ alias gsb='git status -sb'
 alias gst='git status'
 
 alias gload='source ~/.oh-my-zsh/plugins/git-plugin.zsh'
-

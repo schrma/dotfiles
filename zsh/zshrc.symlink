@@ -30,6 +30,7 @@ setopt COMPLETE_ALIASES
 set -o vi
 
 prepend_path $DOTFILES/bin
+prepend_path $HOME/bin
 
 source "$DOTFILES/zsh/agnoster.zsh-theme"
 source "$DOTFILES/zsh/alias.zsh"
@@ -50,7 +51,15 @@ typeset -A plugins
 
 zfetch $ZPLUGDIR zsh-users/zsh-syntax-highlighting
 zfetch $ZPLUGDIR zsh-users/zsh-autosuggestions
-# zfetch $ZPLUGDIR chriskempson/base16-shell
+zfetch $ZPLUGDIR clvv/fasd
+
+# Preparation for fasd
+# copy fasd to ~/bin
+if [[ ! -a $ZPLUGDIR/clvv/fasd ]]; then
+  PREFIX=$HOME make -C $ZPLUGDIR/clvv/fasd install
+fi 
+source "$DOTFILES/zsh/fasd.plugin.zsh"
+
 
 if [[ -x "$(command -v fnm)" && -z "$FNM_LOADED" ]]; then
     eval "$(fnm env --multi --use-on-cd)"
