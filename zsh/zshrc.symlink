@@ -55,7 +55,7 @@ zfetch $ZPLUGDIR clvv/fasd
 
 # Preparation for fasd
 # copy fasd to ~/bin
-if [[ ! -a $ZPLUGDIR/clvv/fasd ]]; then
+if [[ ! -e $HOME/bin/fasd ]]; then
   PREFIX=$HOME make -C $ZPLUGDIR/clvv/fasd install
 fi 
 source "$DOTFILES/zsh/fasd.plugin.zsh"
