@@ -67,6 +67,8 @@ if [[ -x "$(command -v fnm)" && -z "$FNM_LOADED" ]]; then
 fi
 [[ -e ~/.terminfo ]] && export TERMINFO_DIRS=~/.terminfo:/usr/share/terminfo
 
+# allow alias in sudo
+alias sudo='sudo '
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
