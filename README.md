@@ -1,16 +1,15 @@
 # Dotfiles
 
-Welcome to my world. This is a collection of vim, tmux, and zsh configurations. Interested in a video walkthrough of the dotfiles? Check out my talk, [vim + tmux](https://www.youtube.com/watch?v=5r6yzFEXajQ).
+Welcome to my world. This is a collection of vim, tmux, and zsh configurations. Everything is based on https://github.com/nicknisi/dotfiles 
 
-Obviously this setup works for me, a JavaScript developer on macOS, but this particular setup may not work for you. If this particular setup doesn't work for you, please steal ideas from this and if you like, contribute back tips, tricks, and other tidbits via Pull Requests if you like!
-![A screenshot of the dotfiles setup](screenshot.png)
+Thanks Nick Nisi for the great starting point. I just changed some points for my installation
 
 ## Contents
 
 + [Initial Setup and Installation](#initial-setup-and-installation)
 + [ZSH Setup](#zsh-setup)
 + [Prompt](#prompt)
-+ [Vim and Neovim Setup](#vim-and-neovim-setup)
++ [Vim](#vim-and-neovim-setup)
 + [Fonts](#fonts)
 + [Tmux](#tmux-configuration)
 
@@ -26,17 +25,12 @@ This will not delete any of these files, and the install scripts will not overwr
 
 ### Installation
 
-If on OSX, you will need to install the XCode CLI tools before continuing. To do so, open a terminal and type
-
-```bash
-➜ xcode-select --install
-```
-
 Then, clone the dotfiles repository to your home directory as `~/.dotfiles`. 
 
 ```bash
 ➜ git clone https://github.com/nicknisi/dotfiles.git ~/.dotfiles
 ➜ cd ~/.dotfiles
+➜ ./install
 ➜ ./install.sh
 ```
 
