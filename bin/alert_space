@@ -1,0 +1,14 @@
+#!/bin/bash
+
+FS="/home"
+THRESHOLD=60
+OUTPUT=($(LC_ALL=C df -P ${FS}))
+CURRENT=$(echo ${OUTPUT[11]} | sed 's/%//')
+
+BODY_TEXT="$FS file system usage $CURRENT %"
+MAIL_SUBJECT="$FS filesystem to high"
+if [ $CURRENT -gt $THRESHOLD ]; then
+  send_email_to "${MAIL_SUBJECT}" "${BODY_TEXT}"
+  echo "$(date) - $BODY_TEXT, e-mail was sent"
+fi
+

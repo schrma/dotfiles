@@ -1,0 +1,8 @@
+#!/bin/bash
+
+RX_PERSON="marcoschr@gmx.de"
+MAIL_SUBJECT="Test-Email from $(date)"
+BODY_TEXT="Mail is arrived"
+
+echo $BODY_TEXT | mail -s $MAIL_SUBJECT -a "From: marcoschr@gmx.de" $RX_PERSON
+echo "Mail was sent to $RX_PERSON with Subject: $MAIL_SUBJECMail was sent to $RX_PERSON with Subject: $MAIL_SUBJECTT"
