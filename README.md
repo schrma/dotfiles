@@ -8,9 +8,6 @@ Thanks Nick Nisi for the great starting point. I just changed some points for my
 
 + [Initial Setup and Installation](#initial-setup-and-installation)
 + [ZSH Setup](#zsh-setup)
-+ [Prompt](#prompt)
-+ [Vim](#vim-and-neovim-setup)
-+ [Fonts](#fonts)
 + [Tmux](#tmux-configuration)
 
 ## Initial Setup and Installation
@@ -43,34 +40,18 @@ ZSH is configured in the `zshrc.symlink` file, which will be symlinked to the ho
 * Setup zplug plugin manager for zsh plugins and installed them.
 * source a `~/.localrc` if it exists so that additional configurations can be made that won't be kept track of in this dotfiles repo. This is good for things like API keys, etc.
 * Add the `~/bin` and `$DOTFILES/bin` directories to the path
+* Use eval `dircolors ~/.dotfiles/resources/dircolors.ansi-dark` (Thanks to https://github.com/seebi/dircolors-solarized)
 * And more...
+
 
 ## Vim and Neovim Setup
 
-[Neovim](https://neovim.io/) is a fork and drop-in replacement for vim. in most cases, you would not notice a difference between the two, other than Neovim allows plugins to run asynchronously so that they do not freeze the editor, which is the main reason I have switched over to it. Vim and Neovim both use Vimscript and most plugins will work in both (all of the plugins I use do work in both Vim and Neovim). For this reason, they share the same configuration files in this setup. Neovim uses the [XDG base directory specification](http://standards.freedesktop.org/basedir-spec/basedir-spec-latest.html) which means it won't look for a `.vimrc` in your home directory. Instead, its configuration looks like the following:
-
-|                         | Vim        | Neovim                    |
-|-------------------------|------------|---------------------------|
-| Main Configuration File  | `~/.vimrc` | `~/.config/nvim/init.vim` |
-| Configuration directory | `~/.vim`   | `~/.config/nvim`          |
 
 ### Installation
 
-Vim is likely already installed on your system. If using a Mac, MacVim will be installed from Homebrew. Neovim will also be installed from Homebrew by default on a Mac. For other systems, you may need to install Neovim manually. See their [web site](https://neovim.io) for more information.
-
-[`link.sh`](install/link.sh) will symlink the XDG configuration directory into your home directory and will then create symlinks for `.vimrc` and `.vim` over to the Neovim configuration so that Vim and Neovim will both be configured in the same way from the same files. The benefit of this configuration is that you only have to maintain a single vim configuration for both, so that if Neovim (which is still alpha software) has issues, you can very seamlessly transition back to vim with no big impact to your productivity.
-
-Inside of [`.zshrc`](zsh/zshrc.symlink), the `EDITOR` shell variable is set to `nvim`, defaulting to Neovim for editor tasks, such as git commit messages. Additionally, I have aliased `vim` to `nvim` in [`aliases.zsh`](zsh/aliases.zsh) You can remove this if you would rather not alias the `vim` command to `nvim`.
-
-vim and neovim should just work once the correct plugins are installed. To install the plugins, you will need to open Neovim in the following way:
-
-```bash
-➜ nvim +PlugInstall
-```
 
 ## Fonts
 
-I am currently using [Operator Mono](http://www.typography.com/fonts/operator/styles/operatormonoscreensmart) as my default font which is a paid font ($199 US) and does not include Powerline support. You do not need this font at all and there is nothing directly referencing it in the setup. For a great, free programming font, check out Mozilla's [Fira](http://mozilla.github.io/Fira/). In addition to this, I do have [nerd-fonts](https://github.com/ryanoasis/nerd-fonts) installed and configured to be used for non-ascii characters via iTerm2's profile settings. If you would prefer not to do this, then simply remove the `Plug 'ryanoasis/vim-devicons'` plugin from vim/nvim.
 
 ## Tmux Configuration
 

@@ -61,6 +61,8 @@ if [[ ! -e $HOME/bin/fasd ]]; then
 fi 
 source "$DOTFILES/zsh/fasd.plugin.zsh"
 
+# Colors for ls
+eval `dircolors $DOTFILES/resources/dircolors.256dark`
 
 if [[ -x "$(command -v fnm)" && -z "$FNM_LOADED" ]]; then
     eval "$(fnm env --multi --use-on-cd)"
