@@ -28,6 +28,7 @@ setopt COMPLETE_ALIASES
 
 # enable vi-mode https://www.techrepublic.com/blog/linux-and-open-source/using-vi-key-bindings-in-bash-and-zsh/
 set -o vi
+export VISUAL=vim
 
 prepend_path $DOTFILES/bin
 prepend_path $HOME/bin
