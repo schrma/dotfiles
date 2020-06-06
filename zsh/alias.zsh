@@ -37,3 +37,10 @@ alias gsb='git status -sb'
 alias gst='git status'
 
 alias gload='source ~/.oh-my-zsh/plugins/git-plugin.zsh'
+
+echo "11111111111111"
+if [[ -a ~/.localdot/alias.zsh ]]; then
+    echo "--------------"
+    source ~/.localdot/alias.zsh
+fi
+
