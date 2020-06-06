@@ -102,8 +102,6 @@ noremap <Leader>ss :setlocal spell spelllang=de_ch,en<CR>
 noremap <Leader>sn ]s
 noremap <Leader>sN [s
 
-noremap <Leader>uf :Unite file<CR>
-noremap <Leader>um :Unite file_mru<CR>
-noremap <Leader>ur :Unite file_rec<CR>
-noremap <Leader>us :Unite grep<CR>
 
+noremap <Leader>b :Bible
+command! -nargs=* -complete=shellcmd Bible  :read !~/tools/bibleinserter/getBibleVersParam.sh <args>
