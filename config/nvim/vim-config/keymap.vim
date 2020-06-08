@@ -7,7 +7,7 @@
 autocmd! bufwritepost % source %
 
 "----------------------------------------
-" Normal
+" Without leader
 "----------------------------------------
 
 :noremap <F5> :NERDTree<cr>
