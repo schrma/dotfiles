@@ -4,13 +4,14 @@
 "----------------------------------------
 "----------------------------------------
 
+let g:vimspector_enable_mappings = 'HUMAN'
 autocmd! bufwritepost % source %
 
 "----------------------------------------
 " Without leader
 "----------------------------------------
 
-:noremap <F5> :NERDTree<cr>
+":noremap <F5> :NERDTree<cr>
 " open file under cursor in right window
 
 :map ö [
@@ -84,7 +85,7 @@ nnoremap <CR><CR> vip
 " Quick quit command
 noremap <Leader>e :quit<CR> " Quit current window
 noremap <Leader>E :qa!<CR> " Quit all windows
-noremap <Leader>l :CtrlPTag<CR>
+noremap "<Leader>l :CtrlPTag<CR>
 noremap <Leader>md <esc>:call MdToHtml()<CR>
 noremap <Leader>N <esc>:cp<CR>
 noremap <Leader>n <esc>:cn<CR>

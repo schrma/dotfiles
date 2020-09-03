@@ -18,7 +18,8 @@ call vundle#begin()
 Plugin 'plasticboy/vim-markdown'
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'Valloric/YouCompleteMe'
-" Plugin 'preservim/nerdtree'
+Plugin 'preservim/nerdtree'
+Plugin 'puremourning/vimspector.git'
 
 " comment
 " Plugin 'vimwiki/vimwiki'
