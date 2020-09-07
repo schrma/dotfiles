@@ -85,7 +85,7 @@ augroup markdownSpell
     autocmd!
     autocmd FileType markdown setlocal spell
     autocmd BufRead,BufNewFile *.md setlocal spell
-    autocmd BufRead,BufNewFile *.txt setlocal spell
+    autocmd BufRead,BufNewFile *.txt setlocal nospell
 augroup END
 
 set spelllang=de,en
@@ -180,4 +180,15 @@ if g:MSWindows == 0
           \ endif
     au VimLeave * silent execute '!echo -ne "\e[ q"' | redraw!
   endif
+endif
+
+
+"----------------------------------------
+" Prevent Replace mode
+"----------------------------------------
+
+" FIX: ssh from wsl starting with REPLACE mode
+" " https://stackoverflow.com/a/11940894
+if $TERM =~ 'xterm-256color'
+  set noek
 endif
