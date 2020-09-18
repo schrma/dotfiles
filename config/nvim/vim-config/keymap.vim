@@ -4,15 +4,9 @@
 "----------------------------------------
 "----------------------------------------
 
-let g:vimspector_enable_mappings = 'HUMAN'
-autocmd! bufwritepost % source %
-
 "----------------------------------------
 " Without leader
 "----------------------------------------
-
-":noremap <F5> :NERDTree<cr>
-" open file under cursor in right window
 
 :map ö [
 :map ä ]
@@ -60,12 +54,7 @@ nnoremap <CR><CR> vip
 
 :let mapleader = ","
 
-" Unite
-"----------------------------------------
-
-:noremap <Leader>astart :profile start profile.log<CR>:profile func *<CR>:profile file *<CR>
-:noremap <Leader>astop :profile pause<CR>:noautocmd qall!
-:noremap <Leader>mc :Explore<CR>
+:noremap <Leader>mc :NERDTree<CR>
 
 " Python break point
 ":noremap <Leader>b Oimport ipdb; ipdb.set_trace() # BREAKPOINT<C-c>
@@ -79,9 +68,12 @@ nnoremap <CR><CR> vip
 
 
 " open .vimrc
-:nnoremap <leader>ek :vsplit $HOME/vim-config/keymap.vim<cr>
-:nnoremap <leader>et :vsplit $HOME/vim-config/snippets.vim<cr>
-:nnoremap <leader>es :source $MYVIMRC<CR>
+command Reload execute "source ~/.vimrc"
+command Confgure execute "source /home/schrma/.dotfiles/config/nvim/config_session.vim"
+
+" Execute command
+noremap <Leader>x :w<CR>:! %:p<CR>
+
 " Quick quit command
 noremap <Leader>e :quit<CR> " Quit current window
 noremap <Leader>E :qa!<CR> " Quit all windows

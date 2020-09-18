@@ -12,46 +12,12 @@ set rtp+=~/.vim/bundle/vundle
 " this is the call to begin the vundle Plugin Opperation
 
 call vundle#begin()
-" Plugin 'Lokaltog/vim-powerline.git'
-" Plugin 'klen/python-mode'
-" Plugin 'gmarik/Vundle.vim'
-Plugin 'plasticboy/vim-markdown'
-Plugin 'tmhedberg/SimpylFold'
+"Plugin 'plasticboy/vim-markdown'
+"Plugin 'tmhedberg/SimpylFold'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'preservim/nerdtree'
 Plugin 'puremourning/vimspector.git'
-
-" comment
-" Plugin 'vimwiki/vimwiki'
-
-" Plugin 'scrooloose/nerdtree'
-" Plugin 'vim-syntastic/syntastic'
-" Plugin 'Shougo/neomru.vim'
-
-" comment
-" Plugin 'daeyun/vim-matlab'
-
-" Plugin 'Shougo/vimproc.vim'
-" Plugin 'Shougo/vimshell.vim'
-
-" comment
-" Plugin 'vim-scripts/MatlabFilesEdition'
-
-
-" Plugin 'Shougo/nite.vim'
-" Plugin 'vim-scripts/Conque-GDB'
 Plugin 'kien/ctrlp.vim'
-
-" comment
-" Plugin 'danro/rename.vim'
-" Plugin 'vim-scripts/Conque-Shell'
-" Bundle 'lrvick/Conque-Shell'
-" Bundle 'jpo/vim-railscasts-theme'
-" Bundle 'wkentaro/conque.vim'
-
-Bundle 'tpope/vim-fugitive'
-
-" Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline.git'
 call vundle#end()
 

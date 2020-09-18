@@ -23,6 +23,7 @@ execute "source " . MYVIMBASE . "/vim-config/general.vim"
 execute "source " . MYVIMBASE . "/vim-config/keymap.vim"
 execute "source " . MYVIMBASE . "/vim-config/pluginsettings.vim"
 execute "source " . MYVIMBASE . "/vim-config/snippets.vim"
+execute "source " . MYVIMBASE . "/vim-config/vimspector.vim"
 "execute "source " . MYVIMBASE . "/vim-config/syling.vim"
 
 

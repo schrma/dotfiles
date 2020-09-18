@@ -4,6 +4,14 @@
 "----------------------------------------
 "----------------------------------------
 
+let s:clip = '/mnt/c/Windows/System32/clip.exe' 
+if executable(s:clip)
+  augroup WSLYank
+    autocmd!
+    autocmd TextYankPost * call system('echo '.shellescape(join(v:event.regcontents, "\<CR>")).' | '.s:clip)
+  augroup END
+end
+
 "----------------------------------------
 " Undo/Redo/Backup
 "----------------------------------------
@@ -82,10 +90,10 @@ if filereadable("/home/marco/.vimrc1")
 endif
 
 augroup markdownSpell
-    autocmd!
-    autocmd FileType markdown setlocal spell
-    autocmd BufRead,BufNewFile *.md setlocal spell
-    autocmd BufRead,BufNewFile *.txt setlocal nospell
+  autocmd!
+  autocmd FileType markdown setlocal spell
+  autocmd BufRead,BufNewFile *.md setlocal spell
+  autocmd BufRead,BufNewFile *.txt setlocal nospell
 augroup END
 
 set spelllang=de,en
@@ -114,11 +122,13 @@ set wrapmargin=0
 highlight ColorColumn ctermbg=233
 
 
-set makeprg=./%
+set makeprg=make\ -C\ ./Debug
 set autowrite
 set bs=2
 set laststatus=2
 set statusline=%f\ %4l/%L\ lines
+
+set ignorecase
 
 " Tab completion 
 set wildmenu
@@ -129,6 +139,7 @@ set wildchar=<Tab>
 " Better Completion 
 set complete=.,w,b,u,t
 set completeopt=longest,menuone,preview
+
 
 " When saving new file, surpress non-exist dir error and create new directory.
 function! s:MkNonExDir(file, buf)
