@@ -201,5 +201,7 @@ endif
 " FIX: ssh from wsl starting with REPLACE mode
 " " https://stackoverflow.com/a/11940894
 if $TERM =~ 'xterm-256color'
-  set noek
+  if !has('nvim')
+    set noek
+  endif
 endif
