@@ -86,3 +86,14 @@ if executable('ag')
   let g:unite_source_grep_recursive_opt = ''
   let g:unite_source_grep_separator = ''
 endif
+
+"----------------------------------------
+" Nerdtree
+"----------------------------------------
+let g:NERDTreeWinPos = "left"
+let NERDTreeShowHidden=1
+let NERDTreeIgnore = ['\.pyc$', '__pycache__']
+let g:NERDTreeWinSize=35
+map <leader>mc :NERDTreeToggle<cr>
+map <leader>nb :NERDTreeFromBookmark<Space>
+map <leader>nf :NERDTreeFind<cr>

@@ -16,6 +16,7 @@
 :iab <expr> tma printf("!%s\n\n$Tagebuch\n\n%s, %s. %s\n",MYTIME,MYWEEKDAY,MYDAY,MYMONTH)
 :iab <expr> tta printf("!%s\n",MYTIME)
 :iab <expr> tmr printf("!%s\n\n$RueckblickMonat\n\n\# %s\n\n## Rückblick\n",MYTIME,MYMONTH)
+:iab bbb #!/bin/bash<CR>
 
 "----------------------------------------
 " Matlab

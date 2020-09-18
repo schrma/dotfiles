@@ -54,8 +54,6 @@ nnoremap <CR><CR> vip
 
 :let mapleader = ","
 
-:noremap <Leader>mc :NERDTree<CR>
-
 " Python break point
 ":noremap <Leader>b Oimport ipdb; ipdb.set_trace() # BREAKPOINT<C-c>
 
@@ -72,7 +70,7 @@ command Reload execute "source ~/.vimrc"
 command Confgure execute "source /home/schrma/.dotfiles/config/nvim/config_session.vim"
 
 " Execute command
-noremap <Leader>x :w<CR>:! %:p<CR>
+norema <Leader>x :w<CR>:! %:p<CR>
 
 " Quick quit command
 noremap <Leader>e :quit<CR> " Quit current window
