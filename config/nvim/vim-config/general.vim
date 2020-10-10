@@ -1,6 +1,6 @@
 "----------------------------------------
 "----------------------------------------
-" Genral
+" General
 "----------------------------------------
 "----------------------------------------
 
@@ -11,6 +11,13 @@ if executable(s:clip)
     autocmd TextYankPost * call system('echo '.shellescape(join(v:event.regcontents, "\<CR>")).' | '.s:clip)
   augroup END
 end
+
+"----------------------------------------
+" Pandoc
+"----------------------------------------
+command! -nargs=* -complete=shellcmd F :read !~/.dotfiles/bin/pandoc-files/addFooter.sh <args>
+
+
 
 "----------------------------------------
 " Undo/Redo/Backup

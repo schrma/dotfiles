@@ -1,0 +1,41 @@
+\usepackage{datetime}
+\usepackage{wrapfig}
+\usepackage[english,ngerman]{babel}
+
+% Margins
+\usepackage[vmargin=1.2in,hmargin=1.1in,twoside]{geometry} %twoside to get different header/footer for odd/even pages
+
+% Header und Footer
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\footrulewidth}{0.4pt}
+% \newlength{\headerLengthLine} \setlength{\headerLengthLine}{\headwidth}
+
+% \addtolength{\headerLengthLine}{-4cm} % -4cm is just something I like to not have the full line
+% \renewcommand{\headrule}{\vbox to 0pt{\hbox to\headerLengthLine{\hrulefill}\vss}}
+\fancyhead[R]{}
+\fancyhead[L]{\qquad\qquad\qquad\leftmark}
+\fancyfoot[LO,RE]{\today}
+\fancyfoot[C]{Seite \thepage}
+
+\usepackage{graphicx,grffile}
+
+% Table every second grey
+% \usepackage[table]{xcolor}
+% \definecolor{lightgray}{gray}{0.97}
+% \rowcolors{4}{}{lightgray}
+%\let\oldtabular\tabular
+%\let\endoldtabular\endtabular
+%\renewenvironment{tabular}{\rowcolors{1}{}{lightgray}\oldtabular}{\endoldtabular}
+
+
+\makeatletter
+
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+
