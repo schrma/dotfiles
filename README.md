@@ -43,7 +43,9 @@ ZSH is configured in the `zshrc.symlink` file, which will be symlinked to the ho
 
 
 ## Vim and Neovim Setup
-
+```bash
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/vundle
+```
 
 ### Installation
 
