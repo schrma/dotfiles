@@ -40,7 +40,7 @@ if [ "$(uname)" == "Darwin" ]; then
     fi
 
     if [[ "$SHELL" != "$zsh_path" ]]; then
-        chsh -s "$zsh_path"
+        chsh -s "$zsh_path
         echo "default shell changed to $zsh_path"
     fi
 
@@ -48,7 +48,8 @@ if [ "$(uname)" == "Darwin" ]; then
 fi
 
 echo "creating vim directories"
-mkdir -p ~/.vim-tmp
+mkdir -p $HOME/.vim/files-backup
+mkdir -p $HOME/.vim/files-undo
 
 if ! command_exists zsh; then
     echo "zsh not found. Please install and then re-run installation scripts"
