@@ -46,11 +46,34 @@ ZSH is configured in the `zshrc.symlink` file, which will be symlinked to the ho
 ```bash
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/vundle
 ```
+Start vim and type `:PluginInstall`
 
-### Installation
+### YouCompleteMe
+https://github.com/ycm-core/YouCompleteMe#linux-64-bit
+
+
+```bash
+sudo apt install build-essential cmake vim-nox python3-dev
+cd ~/.vim/bundle/YouCompleteMe
+python3 install.py --all
+
+```
 
 
 ## Fonts
+
+In Windows
+
+```bash
+mkdir c:/fonts
+cd c:/fonts
+git clone https://github.com/powerline/fonts.git
+cd fonts
+Set-ExecutionPolicy RemoteSigned
+.\install.ps1
+Set-ExecutionPolicy RemoteSigned
+```
+
 
 
 ## Tmux Configuration
