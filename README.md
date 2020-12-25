@@ -48,6 +48,13 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/vundle
 ```
 Start vim and type `:PluginInstall`
 
+### Neovim
+```bash
+sudo add-apt-repository ppa:neovim-ppa/unstable
+sudo apt-get update
+sudo apt-get install neovim
+```
+
 ### YouCompleteMe
 https://github.com/ycm-core/YouCompleteMe#linux-64-bit
 
