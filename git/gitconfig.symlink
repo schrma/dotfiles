@@ -1,6 +1,6 @@
 [user]
-	name = Marco Neukirch
-	email = marcoschr@gmx.de
+	name = Marco Leica
+	email = marco.schroeder@leica-geosystems.com
 [core]
 	editor = vim
 [alias]
@@ -10,7 +10,9 @@
 	up = rebase
 	ci = commit
 	d = difftool
-	tree = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset%n' --abbrev-commit --date=relative --branches
+    tree = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset%n' --abbrev-commit --date=relative --branches --all
+    lg = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit -5
+
 [github]
 	user = schrma
 [credential]
