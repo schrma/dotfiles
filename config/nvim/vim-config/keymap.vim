@@ -48,6 +48,8 @@ nnoremap gF :e <cfile><cr>
 " Visual select block with double Enter.
 nnoremap <CR><CR> vip
 
+
+
 "----------------------------------------
 " Leader
 "----------------------------------------
@@ -59,10 +61,14 @@ nnoremap <CR><CR> vip
 
 " Python commands 
 :autocmd FileType python    nnoremap <buffer> <leader>c I#<esc>
-:autocmd FileType python    vnoremap <leader>cc :s/^/#/<cr>
+:autocmd FileType python    vnoremap <leader>cc :s/^/# /<cr>
 :autocmd FileType python    vnoremap <leader>cm :s/^#//<cr>
 :autocmd FileType python    nnoremap <buffer> <Leader>b Ofrom pudb import set_trace; set_trace() # BREAKPOINT<C-c>
 :autocmd FileType python    nnoremap <buffer> <Leader>r :!python3 % <cr>
+
+" Bash commands
+:autocmd BufRead,BufNewFile *.sh nnoremap <leader>c I# <esc>
+:autocmd BufRead,BufNewFile *.sh vnoremap <leader>cc :s/^/# /<cr>
 
 
 " open .vimrc
@@ -81,6 +87,7 @@ noremap <Leader>N <esc>:cp<CR>
 noremap <Leader>n <esc>:cn<CR>
 noremap <Leader>ot :tabedit % <CR>
 noremap <Leader>p <esc>:CtrlP<CR>
+noremap <Leader>f <esc>:vimgrep <cword> *<CR>
 
 " search an replace
 noremap <Leader>s :%s/\<<C-r><C-w>\>/

@@ -109,6 +109,8 @@ set spelllang=de,en
 set foldmethod=indent
 set foldlevel=99
 
+"Enable Adjusting the split window buffer size with mouse
+:set ttymouse=xterm2
 
 " This changes the values of a LOT of options, enabling features which are not Vi compatible but really really nice. 
 " same as set nocp
