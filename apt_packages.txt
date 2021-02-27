@@ -1,7 +1,10 @@
 # Totalcommander
 mc
 
+powerline
 git
+vim
+neovim
 tmux
 zsh
 silversearcher-ag
