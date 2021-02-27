@@ -81,7 +81,61 @@ Set-ExecutionPolicy RemoteSigned
 Set-ExecutionPolicy RemoteSigned
 ```
 
+## Windows Terminal
+Set "defaultProfile" to Ubuntu Terminal
 
+```
+   // Add custom color schemes to this array.
+    // To learn more about color schemes, visit https://aka.ms/terminal-color-schemes
+    "schemes": [
+        {
+            "background" : "#002B36",
+            "black" : "#002B36",
+            "blue" : "#268BD2",
+            "brightBlack" : "#657B83",
+            "brightBlue" : "#839496",
+            "brightCyan" : "#D33682",
+            "brightGreen" : "#B58900",
+            "brightPurple" : "#EEE8D5",
+            "brightRed" : "#CB4B16",
+            "brightWhite" : "#FDF6E3",
+            "brightYellow" : "#586E75",
+            "cyan" : "#2AA198",
+            "foreground" : "#93A1A1",
+            "green" : "#859900",
+            "name" : "wsl",
+            "purple" : "#6C71C4",
+            "red" : "#DC322F",
+            "white" : "#93A1A1",
+            "yellow" : "#B58900"
+        }
+    ],
+
+    // Add custom keybindings to this array.
+    // To unbind a key combination from your defaults.json, set the command to "unbound".
+    // To learn more about keybindings, visit https://aka.ms/terminal-keybindings
+    "keybindings":
+    [
+        // Copy and paste are bound to Ctrl+Shift+C and Ctrl+Shift+V in your defaults.json.
+        // These two lines additionally bind them to Ctrl+C and Ctrl+V.
+        // To learn more about selection, visit https://aka.ms/terminal-selection
+        { "command": {"action": "copy", "singleLine": false }, "keys": "ctrl+c" },
+        { "command": "paste", "keys": "ctrl+v" },
+
+        // Press Ctrl+Shift+F to open the search box
+        { "command": "find", "keys": "ctrl+shift+f" },
+
+        // Press Alt+Shift+D to open a new pane.
+        // - "split": "auto" makes this pane open in the direction that provides the most surface area.
+        // - "splitMode": "duplicate" makes the new pane use the focused pane's profile.
+        // To learn more about panes, visit https://aka.ms/terminal-panes
+        { "command": { "action": "splitPane", "split": "auto", "splitMode": "duplicate" }, "keys": "alt+shift+d" }
+        
+        // Remove F11 for shortcuts
+        { "command": null, "keys": "f11" }
+    ]
+}
+```
 
 ## Tmux Configuration
 
