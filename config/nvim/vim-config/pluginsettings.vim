@@ -5,6 +5,7 @@
 "----------------------------------------
 "----------------------------------------
 
+let g:MSWindows = has('win95') + has('win16') + has('win32') + has('win64')
 
 " set Runtime path to inc vundle and initialize
 set rtp+=~/.vim/bundle/vundle
@@ -17,9 +18,11 @@ call vundle#begin()
 Plugin 'junegunn/vim-peekaboo'
 Plugin 'LucHermitte/lh-vim-lib'
 Plugin 'LucHermitte/local_vimrc'
-Plugin 'Valloric/YouCompleteMe'
+if g:MSWindows == 0
+  Plugin 'puremourning/vimspector.git'
+  Plugin 'Valloric/YouCompleteMe'
+endif
 Plugin 'preservim/nerdtree'
-Plugin 'puremourning/vimspector.git'
 Plugin 'kien/ctrlp.vim'
 Plugin 'vim-airline/vim-airline.git'
 call vundle#end()
