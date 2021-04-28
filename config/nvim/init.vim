@@ -10,7 +10,7 @@ autocmd! bufwritepost .vimrc source %
 let g:MSWindows = has('win95') + has('win16') + has('win32') + has('win64')
 
 if g:MSWindows
-	let MYVIMBASE=$VIM
+	let MYVIMBASE=$HOME
 else
 	let MYVIMBASE=$HOME
 endif
