@@ -130,6 +130,7 @@ set wrapmargin=0
 " set colorcolumn=80
 highlight ColorColumn ctermbg=233
 
+set belloff=all
 
 set makeprg=make\ -C\ ./Debug
 set autowrite
