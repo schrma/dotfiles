@@ -21,10 +21,14 @@
 "----------------------------------------
 " Matlab
 "----------------------------------------
-let $skeletonpath="C:/data/vim/skeleton"
+let skeletonpath = "$HOME/.dotfiles/config/nvim/skeletons/" "Was not working properly
 nnoremap ,matc :-1read $skeletonpath\matlabClass.m<CR>:%s/ToBeReplaced/\=expand('%:t:r')/g<cr>
 nnoremap ,matf :-1read $skeletonpATH\MATLABfUNCTION.M<cr>:%s/ToBeReplaced/\=expand('%:t:r')/g<cr>
 
 
+"----------------------------------------
+" Bash
+"----------------------------------------
+autocmd BufNewFile *.sh 0r $HOME/.dotfiles/config/nvim/skeletons/bash.sh
 
 
