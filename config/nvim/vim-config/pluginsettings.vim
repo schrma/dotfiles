@@ -14,6 +14,7 @@ set rtp+=~/.vim/bundle/vundle
 call vundle#begin()
 "Plugin 'plasticboy/vim-markdown'
 "Plugin 'tmhedberg/SimpylFold'
+Plugin 'junegunn/vim-peekaboo'
 Plugin 'LucHermitte/lh-vim-lib'
 Plugin 'LucHermitte/local_vimrc'
 Plugin 'Valloric/YouCompleteMe'
