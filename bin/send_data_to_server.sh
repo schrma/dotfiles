@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# reads the follwing variables, PATH_WHERE_DATA_TO_TRANSFER_ARE
+# reads the follwing variables, MY_PORT, SERVER_PATH
 
 source $HOME/.config/send.cfg
 
-scp -P 1022 $PATH_WHERE_DATA_TO_TRANSFER_ARE/* marco@neukirch.spdns.org:/home/marco/receive
+scp -P $MY_PORT ./* $SERVER_PATH
