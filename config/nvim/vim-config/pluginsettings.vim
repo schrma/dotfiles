@@ -18,6 +18,7 @@ call vundle#begin()
 Plugin 'junegunn/vim-peekaboo'
 Plugin 'LucHermitte/lh-vim-lib'
 Plugin 'LucHermitte/local_vimrc'
+Plugin 'tpope/vim-commentary'
 if g:MSWindows == 0
   Plugin 'puremourning/vimspector.git'
   Plugin 'Valloric/YouCompleteMe'
