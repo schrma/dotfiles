@@ -11,6 +11,7 @@
 :map ö [
 :map ä ]
 
+command! Vb normal! <C-v>
 
 " Switch between last buffers
 nnoremap <tab> :b#<cr>
