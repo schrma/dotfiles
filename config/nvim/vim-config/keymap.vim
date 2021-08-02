@@ -16,6 +16,9 @@ command! Vb normal! <C-v>
 " Switch between last buffers
 nnoremap <tab> :b#<cr>
 
+" reselect pasted text
+nnoremap gp `[v`]
+
 :inoremap <c-a> <esc>:%y+<cr>
 :vnoremap <c-c> "+y
 " map ctrl n to line numbers
