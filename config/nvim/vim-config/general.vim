@@ -105,6 +105,10 @@ augroup END
 
 set spelllang=de,en
 
+" Open splits more naturally
+set splitbelow
+set splitright
+
 " Enable folding
 set foldmethod=indent
 set foldlevel=99
