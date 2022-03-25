@@ -26,7 +26,7 @@ alias sr='ssh -p 1022 marco@neukirch.spdns.org'
 # Git
 
 alias gcam='git commit -a -m'
-alias gcb='git checkout -b'
+alias gb='git checkout -b'
 alias gcm='git checkout master'
 alias gco='git checkout'
 alias gcount='git shortlog -sn'
