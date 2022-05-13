@@ -1,9 +1,7 @@
 [user]
-	name = Marco Leica
+	name = Marco Nvidia
 	email = marco.schroeder@leica-geosystems.com
 [core]
-	editor = vim
-	autocrlf = true
 [alias]
 	st = status
 	co = checkout
@@ -17,7 +15,7 @@
 [github]
 	user = schrma
 [credential]
-	helper = store
+	helper = cache --timeout 3600
 [diff]
 	tool = vimdiff
 [difftool]
