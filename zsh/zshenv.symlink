@@ -1,5 +1,8 @@
 export DOTFILES=$HOME/.dotfiles
 export CACHEDIR="$HOME/.local/share"
+export PIPENV_VENV_IN_PROJECT=1
+export PIPENV_IGNORE_VIRTUALENVS=1
+export PATH=$HOME/.local/bin:$PATH
 
 [[ -d "$CACHEDIR" ]] || mkdir -p "$CACHEDIR"
 
