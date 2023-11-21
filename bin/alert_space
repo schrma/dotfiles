@@ -3,7 +3,7 @@
 BASE_PATH=~/.dotfiles/bin
 
 FS="/home"
-THRESHOLD=75
+THRESHOLD=85
 OUTPUT=($(LC_ALL=C df -P ${FS}))
 CURRENT=$(echo ${OUTPUT[11]} | sed 's/%//')
 
