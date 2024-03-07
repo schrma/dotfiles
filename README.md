@@ -59,11 +59,20 @@ sudo apt-get install neovim
 https://github.com/ycm-core/YouCompleteMe#linux-64-bit
 
 
+
+
 ```bash
 sudo apt install build-essential cmake vim-nox python3-dev
+```
+```bash
+sudo mkdir -p /etc/apt/keyrings
+curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
+echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_current.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
+apt install mono-complete golang nodejs openjdk-17-jdk openjdk-17-jre npm
+```
+```bash
 cd ~/.vim/bundle/YouCompleteMe
 python3 install.py --all
-
 ```
 
 
