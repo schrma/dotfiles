@@ -1,6 +1,6 @@
 # Totalcommander
 mc
-
+make
 powerline
 git
 vim
