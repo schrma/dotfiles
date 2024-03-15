@@ -9,3 +9,4 @@ tmux
 zsh
 silversearcher-ag
 xclip
+net-tools
