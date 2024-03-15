@@ -10,4 +10,4 @@ zsh
 silversearcher-ag
 xclip
 net-tools
-install cifs-utils
+cifs-utils
