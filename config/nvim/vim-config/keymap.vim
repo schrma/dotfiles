@@ -100,6 +100,7 @@ noremap <Leader>s :%s/\<<C-r><C-w>\>/
 
 " Set bar title in vim scripts
 noremap <Leader>sbar <Esc>mz:execute MyBar()<CR>`zjA
+noremap <Leader>bbar <Esc>mz:execute BashBar()<CR>`zjA
 
 " Spelling mappings
 noremap <Leader>ss :setlocal spell spelllang=de_ch,en<CR>
