@@ -3,7 +3,7 @@
 BASE_PATH=~/.dotfiles/bin
 
 FS="/home"
-THRESHOLD=80
+THRESHOLD=85
 OUTPUT=($(LC_ALL=C df -P ${FS}))
 CURRENT=$(echo ${OUTPUT[11]} | sed 's/%//')
 
@@ -19,6 +19,29 @@ THRESHOLD=80
 OUTPUT=($(LC_ALL=C df -P ${FS}))
 CURRENT=$(echo ${OUTPUT[11]} | sed 's/%//')
 BODY_TEXT="$FS file system usage $CURRENT %"
+MAIL_SUBJECT="$FS filesystem to high"
+if [ $CURRENT -gt $THRESHOLD ]; then
+  $BASE_PATH/send_email_to "${MAIL_SUBJECT}" "${BODY_TEXT}"
+  echo "$(date) - $BODY_TEXT, e-mail was sent"
+fi
+
+FS="/var"
+THRESHOLD=95
+OUTPUT=($(LC_ALL=C df -P ${FS}))
+CURRENT=$(echo ${OUTPUT[11]} | sed 's/%//')
+BODY_TEXT="$FS file system usage $CURRENT %"
+MAIL_SUBJECT="$FS filesystem to high"
+if [ $CURRENT -gt $THRESHOLD ]; then
+  $BASE_PATH/send_email_to "${MAIL_SUBJECT}" "${BODY_TEXT}"
+  echo "$(date) - $BODY_TEXT, e-mail was sent"
+fi
+
+
+FS="/"
+THRESHOLD=80
+OUTPUT=($(LC_ALL=C df -P ${FS}))
+CURRENT=$(echo ${OUTPUT[11]} | sed 's/%//')
+BODY_TEXT="$FS file filesystem usage $CURRENT %"
 MAIL_SUBJECT="$FS filesystem to high"
 if [ $CURRENT -gt $THRESHOLD ]; then
   $BASE_PATH/send_email_to "${MAIL_SUBJECT}" "${BODY_TEXT}"

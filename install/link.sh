@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env bash 
 
 DOTFILES=$HOME/.dotfiles
 
@@ -44,7 +44,6 @@ echo -e "\\n\\nCreating vim symlinks"
 echo "=============================="
 VIMFILES=( "$HOME/vim-config:$DOTFILES/config/nvim/vim-config/"
         "$HOME/.vimrc:$DOTFILES/config/nvim/init.vim" )
-
 for file in "${VIMFILES[@]}"; do
     KEY=${file%%:*}
     VALUE=${file#*:}

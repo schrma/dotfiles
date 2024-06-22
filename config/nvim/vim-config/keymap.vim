@@ -16,6 +16,7 @@ command! Vb normal! <C-v>
 " Switch between last buffers
 nnoremap <tab> :b#<cr>
 
+
 " reselect pasted text
 nnoremap gp `[v`]
 
@@ -78,6 +79,7 @@ nnoremap <CR><CR> vip
 " open .vimrc
 command Reload execute "source ~/.vimrc"
 command Confgure execute "source /home/schrma/.dotfiles/config/nvim/config_session.vim"
+noremap <Leader>k :edit ~/.dotfiles/config/nvim/vim-config/keymap.vim<CR> " Quit all windows
 
 " Execute command
 norema <Leader>x :w<CR>:! %:p<CR>
@@ -98,6 +100,7 @@ noremap <Leader>s :%s/\<<C-r><C-w>\>/
 
 " Set bar title in vim scripts
 noremap <Leader>sbar <Esc>mz:execute MyBar()<CR>`zjA
+noremap <Leader>bbar <Esc>mz:execute BashBar()<CR>`zjA
 
 " Spelling mappings
 noremap <Leader>ss :setlocal spell spelllang=de_ch,en<CR>
