@@ -2,8 +2,8 @@
 
 LINE_TO_ADD_BASH='eval "$(starship init bash)"'
 LINE_TO_ADD_ZSH='eval "$(starship init zsh)"'
-TARGET_FILE_BASH="$HOME/.zshrc"
-TARGET_FILE_ZSH="$HOME/.bashrc"
+TARGET_FILE_ZSH="$HOME/.zshrc"
+TARGET_FILE_BASH="$HOME/.bashrc"
 
 
 # Function to add a line to a specified file if it doesn't already exist
@@ -32,9 +32,9 @@ chmod +x /tmp/install_starship.sh
 
 # Check if zsh is installed using the command -v method
 if command -v zsh &> /dev/null; then
-    add_line_to_file "$LINE_TO_ADD" "$TARGET_FILE"
+    add_line_to_file "$LINE_TO_ADD_ZSH" "$TARGET_FILE_ZSH"
 fi
 
-add_line_to_file "$LINE_TO_ADD" "$TARGET_FILE"
+add_line_to_file "$LINE_TO_ADD_BASH" "$TARGET_FILE_BASH"
 
 

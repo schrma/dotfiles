@@ -1,7 +1,12 @@
 format = """
+$time\
+[](fg:white bg:black)\
 $username\
 $hostname\
+[ ](fg:black bg:blue)\
 $directory\
+[](fg:blue bg:black)\
+[ ](fg:black bg:green)\
 $git_branch\
 $git_status\
 $elixir\
@@ -16,22 +21,27 @@ $nim\
 $rust\
 $scala\
 $docker_context\
-$time\
 $cmd_duration\
 $line_break\
 $character
 """
 
+[time]
+disabled = false
+style='black bg:white'
+format = '🕙[ $time ]($style)'
+time_format = '%T'
+
 [username]
 style_user = "green bold"
 style_root = "red bold"
-format = "[$user]($style) "
+format = " [$user@]($style)"
 disabled = false
 show_always = true
 
 [hostname]
 ssh_only = false
-format = '-[$hostname](bold purple) '
+format = '[$hostname](bold green) '
 trim_at = "."
 disabled = false
 
@@ -41,13 +51,14 @@ error_symbol = "[✗](bold red)"
 
 # configure directory
 [directory]
-read_only = " 󰌾"
-truncation_length = 10
-truncate_to_repo = true # truncates directory to root folder if in github repo
-style = "bold italic blue"
+read_only = " 󰌾(red)"
+truncation_length = 15
+#truncate_to_repo = true # truncates directory to root folder if in github repo
+style = "bold bg:blue fg:white"
+format = '[ $path ]($style)'
 
 [cmd_duration]
-min_time = 4
+min_time = 10
 show_milliseconds = false
 disabled = false
 style = "bold italic red"
@@ -60,7 +71,6 @@ symbol = " "
 
 [dart]
 symbol = " "
-
 
 [docker_context]
 symbol = " "
@@ -79,8 +89,11 @@ symbol = " "
 
 [git_branch]
 symbol = " "
+style = 'bold white bg:green'
+format = '[$symbol$branch(:$remote_branch) ]($style) '
 
 [git_status]
+style='white'
 format = '([\[$all_status$ahead_behind\]]($style) )'
 stashed = "[${count}*](green)" 
 modified = "[${count}+](yellow)" 
@@ -102,10 +115,6 @@ bisect = "bisect"
 am = "am"	
 am_or_rebase = "am/rebase"
 
-[time]
-disabled = false
-format = '🕙[$time]($style) '
-time_format = '%T'
 
 [golang]
 symbol = " "

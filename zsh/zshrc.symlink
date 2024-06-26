@@ -35,7 +35,7 @@ bindkey '^R' history-incremental-search-backward
 prepend_path $DOTFILES/bin
 prepend_path $HOME/bin
 
-source "$DOTFILES/zsh/agnoster.zsh-theme"
+# source "$DOTFILES/zsh/agnoster.zsh-theme"
 source "$DOTFILES/zsh/alias.zsh"
 source "$DOTFILES/zsh/git.zsh"
 
@@ -89,3 +89,4 @@ alias sudo='sudo '
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
+eval "$(starship init zsh)"
