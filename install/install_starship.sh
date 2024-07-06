@@ -22,13 +22,13 @@ add_line_to_file() {
 }
 
 # Download the script to /tmp using wget
-wget https://starship.rs/install.sh -O /tmp/install_starship.sh
+wget https://starship.rs/install.sh -O /tmp/install.sh
 
 # Make the script executable
-chmod +x /tmp/install_starship.sh
+chmod +x /tmp/install.sh
 
 # Execute the script
-/tmp/install_starship.sh
+/tmp/install.sh
 
 # Check if zsh is installed using the command -v method
 if command -v zsh &> /dev/null; then
