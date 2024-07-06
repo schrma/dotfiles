@@ -54,39 +54,9 @@ typeset -A plugins
 
 zfetch $ZPLUGDIR zsh-users/zsh-syntax-highlighting
 zfetch $ZPLUGDIR zsh-users/zsh-autosuggestions
-zfetch $ZPLUGDIR clvv/fasd
-
-# Preparation for fasd
-# copy fasd to ~/bin
-if [[ ! -e $HOME/bin/fasd ]]; then
-  PREFIX=$HOME make -C $ZPLUGDIR/clvv/fasd install
-fi 
-source "$DOTFILES/zsh/fasd.plugin.zsh"
-
-# Colors for ls
-eval `dircolors $DOTFILES/resources/dircolors.256dark`
-
-if [[ -x "$(command -v fnm)" && -z "$FNM_LOADED" ]]; then
-    eval "$(fnm env --multi --use-on-cd)"
-    export FNM_LOADED=1
-fi
-[[ -e ~/.terminfo ]] && export TERMINFO_DIRS=~/.terminfo:/usr/share/terminfo
 
 # allow alias in sudo
 alias sudo='sudo '
 
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
 eval "$(starship init zsh)"
+eval "$(zoxide init zsh)"
