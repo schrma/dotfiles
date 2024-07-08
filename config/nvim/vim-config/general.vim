@@ -4,6 +4,9 @@
 "----------------------------------------
 "----------------------------------------
 
+let g:MSWindows = has('win95') + has('win16') + has('win32') + has('win64')
+let g:IsAndroid = substitute(system('uname -m'),"\n","","")=='aarch64'
+
 let s:clip = '/mnt/c/Windows/System32/clip.exe' 
 if executable(s:clip)
   augroup WSLYank
@@ -114,7 +117,9 @@ set foldmethod=indent
 set foldlevel=99
 
 "Enable Adjusting the split window buffer size with mouse
-:set ttymouse=xterm2
+if g:IsAndroid == 0
+   set ttymouse=xterm2
+endif
 
 " This changes the values of a LOT of options, enabling features which are not Vi compatible but really really nice. 
 " same as set nocp
