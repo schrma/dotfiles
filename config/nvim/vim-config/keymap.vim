@@ -84,6 +84,12 @@ noremap <Leader>k :edit ~/.dotfiles/config/nvim/vim-config/keymap.vim<CR> " Quit
 " Execute command
 norema <Leader>x :w<CR>:! %:p<CR>
 
+"Copy in termux
+vnoremap <Leader>tx :!termux-clipboard-set<CR>
+vnoremap <Leader>tc :w !termux-clipboard-set<CR><CR>
+inoremap <Leader>tv <ESC>:read !termux-clipboard-get<CR>i
+
+
 " Quick quit command
 noremap <Leader>e :quit<CR> " Quit current window
 noremap <Leader>E :qa!<CR> " Quit all windows
