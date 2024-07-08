@@ -1,6 +1,6 @@
 # Totalcommander
 mc
-
+make
 powerline
 git
 vim
@@ -9,3 +9,5 @@ tmux
 zsh
 silversearcher-ag
 xclip
+net-tools
+cifs-utils

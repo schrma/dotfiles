@@ -120,6 +120,7 @@ set foldlevel=99
 if g:IsAndroid == 0
    set ttymouse=xterm2
 endif
+":set ttymouse=xterm2
 
 " This changes the values of a LOT of options, enabling features which are not Vi compatible but really really nice. 
 " same as set nocp

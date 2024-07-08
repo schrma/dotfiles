@@ -20,6 +20,7 @@ Plugin 'junegunn/vim-peekaboo'
 Plugin 'LucHermitte/lh-vim-lib'
 Plugin 'LucHermitte/local_vimrc'
 Plugin 'tpope/vim-commentary'
+"Plugin 'maxboisvert/vim-simple-complete'
 if g:MSWindows == 0 + g:IsAndroid
   Plugin 'puremourning/vimspector.git'
   Plugin 'Valloric/YouCompleteMe'

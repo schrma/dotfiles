@@ -6,9 +6,9 @@ command_exists() {
 
 echo "Installing dotfiles."
 
-source install/link.sh
+source ~/.dotfiles/install/link.sh
 
-source install/git.sh
+source ~/.dotfiles/install/git.sh
 
 echo "creating vim directories"
 mkdir -p $HOME/.vim/files-backup

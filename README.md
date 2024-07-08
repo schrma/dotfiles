@@ -26,7 +26,7 @@ Then, clone the dotfiles repository to your home directory as `~/.dotfiles`.
 
 ```bash
 ➜ git clone https://github.com/schrma/dotfiles.git ~/.dotfiles
-➜ ~/.dotfiles/install.sh
+➜ ~/.dotfiles/setup.sh
 ```
 
 `install.sh` will start by initializing the submodules used by this repository (if any). **Read through this file and comment out anything you don't want installed.** Then, it will install all symbolic links into your home directory. Every file with a `.symlink` extension will be symlinked to the home directory with a `.` in front of it. As an example, `vimrc.symlink` will be symlinked in the home directory as `~/.vimrc`. Then, this script will create a `~/.vim-tmp` directory in your home directory, as this is where vim is configured to place its temporary files. Additionally, all files in the `$DOTFILES/config` directory will be symlinked to the `~/.config/` directory for applications that follow the [XDG base directory specification](http://standards.freedesktop.org/basedir-spec/basedir-spec-latest.html), such as neovim.
@@ -59,11 +59,20 @@ sudo apt-get install neovim
 https://github.com/ycm-core/YouCompleteMe#linux-64-bit
 
 
+
+
 ```bash
 sudo apt install build-essential cmake vim-nox python3-dev
+```
+```bash
+sudo mkdir -p /etc/apt/keyrings
+curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
+echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_current.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
+apt install mono-complete golang nodejs openjdk-17-jdk openjdk-17-jre npm
+```
+```bash
 cd ~/.vim/bundle/YouCompleteMe
 python3 install.py --all
-
 ```
 
 

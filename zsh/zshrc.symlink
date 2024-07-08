@@ -30,11 +30,12 @@ setopt COMPLETE_ALIASES
 # enable vi-mode https://www.techrepublic.com/blog/linux-and-open-source/using-vi-key-bindings-in-bash-and-zsh/
 set -o vi
 export VISUAL=vim
+bindkey '^R' history-incremental-search-backward
 
 prepend_path $DOTFILES/bin
 prepend_path $HOME/bin
 
-source "$DOTFILES/zsh/agnoster.zsh-theme"
+# source "$DOTFILES/zsh/agnoster.zsh-theme"
 source "$DOTFILES/zsh/alias.zsh"
 source "$DOTFILES/zsh/git.zsh"
 
@@ -53,38 +54,9 @@ typeset -A plugins
 
 zfetch $ZPLUGDIR zsh-users/zsh-syntax-highlighting
 zfetch $ZPLUGDIR zsh-users/zsh-autosuggestions
-zfetch $ZPLUGDIR clvv/fasd
-
-# Preparation for fasd
-# copy fasd to ~/bin
-if [[ ! -e $HOME/bin/fasd ]]; then
-  PREFIX=$HOME make -C $ZPLUGDIR/clvv/fasd install
-fi 
-source "$DOTFILES/zsh/fasd.plugin.zsh"
-
-# Colors for ls
-eval `dircolors $DOTFILES/resources/dircolors.256dark`
-
-if [[ -x "$(command -v fnm)" && -z "$FNM_LOADED" ]]; then
-    eval "$(fnm env --multi --use-on-cd)"
-    export FNM_LOADED=1
-fi
-[[ -e ~/.terminfo ]] && export TERMINFO_DIRS=~/.terminfo:/usr/share/terminfo
 
 # allow alias in sudo
 alias sudo='sudo '
 
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
+eval "$(starship init zsh)"
+eval "$(zoxide init zsh)"
