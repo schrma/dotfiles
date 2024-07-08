@@ -6,7 +6,7 @@
 "----------------------------------------
 
 let g:MSWindows = has('win95') + has('win16') + has('win32') + has('win64')
-let g:IsAndroid = system('uname -m') == 'aarch64'
+let g:IsAndroid = trim(system('uname -m')) == 'aarch64'
 
 " set Runtime path to inc vundle and initialize
 set rtp+=~/.vim/bundle/vundle
@@ -21,7 +21,7 @@ Plugin 'LucHermitte/lh-vim-lib'
 Plugin 'LucHermitte/local_vimrc'
 Plugin 'tpope/vim-commentary'
 "Plugin 'maxboisvert/vim-simple-complete'
-if g:MSWindows == 0 + g:IsAndroid
+if g:MSWindows == 1
   Plugin 'puremourning/vimspector.git'
   Plugin 'Valloric/YouCompleteMe'
 endif
