@@ -21,10 +21,11 @@ Plugin 'LucHermitte/lh-vim-lib'
 Plugin 'LucHermitte/local_vimrc'
 Plugin 'tpope/vim-commentary'
 "Plugin 'maxboisvert/vim-simple-complete'
-if g:MSWindows == 1
-  Plugin 'puremourning/vimspector.git'
-  Plugin 'Valloric/YouCompleteMe'
-endif
+Plugin 'codota/tabnine-nvim', { 'do': './dl_binaries.sh' }
+" if g:MSWindows == 1
+  " Plugin 'puremourning/vimspector.git'
+  " Plugin 'Valloric/YouCompleteMe'
+" endif
 Plugin 'preservim/nerdtree'
 Plugin 'kien/ctrlp.vim'
 Plugin 'vim-airline/vim-airline.git'

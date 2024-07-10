@@ -1,7 +1,6 @@
 # Totalcommander
 mc
 make
-powerline
 git
 vim
 neovim
@@ -11,3 +10,9 @@ silversearcher-ag
 xclip
 net-tools
 cifs-utils
+exa
+bat
+fzf
+zoxide
+fontconfig
+curl
