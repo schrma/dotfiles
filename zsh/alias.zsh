@@ -14,10 +14,10 @@ alias lla='exa -la --icons --group-directories-first -G'
 alias tree='exa --tree'
 
 # Tree view
-alias tree1='exa --tree -l 1'
+alias tree1='exa --tree -L 1'
 
 # Show all files in tree view
-alias tree2='exa --tree -l 2'
+alias tree2='exa --tree -L 2'
 
 # Long listing with all files and Git information
 alias lag='exa -la --git'
