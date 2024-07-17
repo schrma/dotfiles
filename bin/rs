@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Wähle einen Befehl aus der Datei 'commands.txt' aus
+selected_command=$(cat $HOME/ssh.txt | fzf --prompt="Select a command: ")
+
+# Überprüfe, ob ein Befehl ausgewählt wurde
+if [ -n "$selected_command" ]; then
+  echo "Executing: $selected_command"
+  eval "$selected_command"
+else
+  echo "No command selected."
+fi
+
+
+
+
