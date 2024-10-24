@@ -24,11 +24,13 @@ nnoremap gp `[v`]
 :vnoremap <c-c> "+y
 " map ctrl n to line numbers
 :noremap <c-n><c-n> :set invnumber<CR>
+:noremap <c-b>i :vsplit<CR>
+:noremap <c-b>- :split<CR>
 :inoremap <c-v> <esc>"+p
-:nnoremap <c-k> <c-w>k
-:nnoremap <c-j> <c-w>j
-:nnoremap <c-h> <c-w>h
-:nnoremap <c-l> <c-w>l
+:nnoremap <c-b>k <c-w>k
+:nnoremap <c-b>j <c-w>j
+:nnoremap <c-b>h <c-w>h
+:nnoremap <c-b>l <c-w>l
 :cnoremap W<CR> w<CR>
 :cnoremap Q<CR> q<CR>
 
