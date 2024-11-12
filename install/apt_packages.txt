@@ -10,7 +10,7 @@ silversearcher-ag
 xclip
 net-tools
 cifs-utils
-exa
+eza
 bat
 fzf
 zoxide
