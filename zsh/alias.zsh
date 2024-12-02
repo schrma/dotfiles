@@ -5,7 +5,7 @@ alias reload!='RELOAD=1 source ~/.zshrc'
 colorflag="--color"
 
 # start totalcommander in current folder
-alias total='TOTALCMD64.EXE /O /L="$(wslpath -w `pwd`)"'
+alias total='TOTALCMD64.EXE /O /L="$(wslpath -w "$(pwd)")"'
 
 # Basic aliases
 alias ls='exa'
