@@ -7,6 +7,7 @@ $hostname\
 $directory\
 [](fg:blue bg:black)\
 [ ](fg:black bg:green)\
+$python
 $git_branch\
 $git_status\
 $elixir\
@@ -150,14 +151,15 @@ symbol = " "
 symbol = " "
 
 [python]
-symbol = " "
+symbol = ""
 #pyenv_version_name = true
-format = 'via [${symbol}python (${version} )(\($virtualenv\) )]($style)'
+format = 'via [${symbol}(${version} )(\($virtualenv\) )]($style)'
 style = "bold yellow"
 pyenv_prefix = "venv "
 python_binary = ["./venv/bin/python", "python", "python3", "python2"]
 detect_extensions = ["py"]
 version_format = "v${raw}"
+disabled = false
 
 [ruby]
 symbol = " "
