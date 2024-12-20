@@ -5,13 +5,12 @@ alias reload!='RELOAD=1 source ~/.zshrc'
 colorflag="--color"
 
 # start totalcommander in current folder
-alias total='TOTALCMD64.EXE /O /L="$(wslpath -w `pwd`)"'
+alias total='TOTALCMD64.EXE /O /L="$(wslpath -w "$(pwd)")"'
 
 # Basic aliases
 alias ls='exa'
-alias ll='exa -l --icons --group-directories-first -G'
-alias la='exa -a'
-alias lla='exa -la --icons --group-directories-first -G'
+alias ll='exa -lg --icons --group-directories-first'
+alias lla='exa -lag --icons --group-directories-first'
 
 # Tree view
 alias tree='exa --tree'
@@ -22,13 +21,8 @@ alias tree1='exa --tree -L 1'
 # Show all files in tree view
 alias tree2='exa --tree -L 2'
 
-# Long listing with all files and Git information
-alias lag='exa -la --git'
-
 # View only directories
-alias lsd='exa --dirs-only'
-
-alias lsf='exa --files-only'
+alias lsd='exa -lag --only-dirs --icons'
 
 # batcat
 alias cat="batcat"
