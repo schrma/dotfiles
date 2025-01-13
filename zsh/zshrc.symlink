@@ -5,6 +5,9 @@
 export ZSH=$DOTFILES/zsh
 export LANG=de_CH.UTF-8
 
+autoload -Uz compinit
+compinit
+
 if [[ -d $DOTFILES/zsh/functions ]]; then
     for func in $DOTFILES/zsh/functions/*(:t); autoload -U $func
 fi
@@ -61,3 +64,9 @@ alias sudo='sudo '
 
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - zsh)"
+export LANG=de_CH.UTF-8
+export LANGUAGE=de_CH.UTF-8
+export LC_ALL=de_CH.UTF-8
