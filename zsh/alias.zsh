@@ -74,6 +74,8 @@ alias sshf='cat -p ~/.ssh/known_hosts | cut -f 1 -d " " | sed "s/,.*//" | sort -
 # Search command history and copy to clipboard using xclip
 alias hfind='history | fzf | cut -d" " -f4- | xclip -selection clipboard'
 
+alias zell='bash <(curl -L https://zellij.dev/launch)'
+
 # Function to preview file content and open with vim
 fzf_preview() {
   local file
